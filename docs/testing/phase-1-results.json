@@ -1,0 +1,56 @@
+{
+  "Date": "2026-10-28",
+  "Timezone": "Asia/Shanghai",
+  "BackendRuntime": "Java17.0.8 / Spring Boot3.5.16",
+  "Database": "MySQL8.0.43 isolated port3307",
+  "RedisTested": "Memurai for Redis8.2 compatible TCP service6380, NOT Redis7",
+  "BackendTests": [
+    {
+      "Name": "com.suishi.security.CryptoSecurityTest",
+      "Tests": 3,
+      "Failures": 0,
+      "Errors": 0,
+      "Skipped": 0
+    },
+    {
+      "Name": "com.suishi.system.IdentityIT",
+      "Tests": 7,
+      "Failures": 0,
+      "Errors": 0,
+      "Skipped": 0
+    }
+  ],
+  "WebUnit": {
+    "Passed": 8,
+    "Failed": 0
+  },
+  "Browser": {
+    "Passed": 3,
+    "Skipped": 0,
+    "Failed": 0
+  },
+  "NpmAudit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "Static": {
+    "SourceUnchanged": true,
+    "MarkdownFiles": 14,
+    "ScriptSyntaxErrors": 0,
+    "Issues": [],
+    "SecretsFound": 0,
+    "LocalLinks": 37
+  },
+  "NotVerified": [
+    "Docker/Compose runtime",
+    "Redis7 original",
+    "MinIO",
+    "Production HTTPS/backups",
+    "WeChat",
+    "Full backend CVE scan"
+  ]
+}

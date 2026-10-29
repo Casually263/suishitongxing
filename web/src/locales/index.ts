@@ -1,0 +1,43 @@
+import { createI18n } from 'vue-i18n'
+
+export const i18n = createI18n({
+  legacy: false,
+  locale: localStorage.getItem('suishi.locale') === 'en' ? 'en' : 'zh',
+  fallbackLocale: 'zh',
+  messages: {
+    zh: {
+      brand: '岁时同行', subtitle: 'WALKING THROUGH THE SEASONS', locale: 'English', home: '我的同行', profile: '文化档案', admin: '管理工作台', users: '用户管理', logout: '退出登录',
+      login: '登录', register: '创建账号', welcome: '与世界，分享四季。', welcomeBody: '从一个节气、一段故事开始，遇见另一种文化，也重新认识自己的日常。',
+      spring: '春生', summer: '夏长', autumn: '秋收', winter: '冬藏', tagline: '岁有时 · 行有伴',
+      loginTitle: '欢迎回来', registerTitle: '让相遇，从这里开始', adminTitle: '内容与运营的幕后', loginHint: '登录你的账号，继续属于你的文化旅程。', registerHint: '选择你的文化身份，建立一份属于自己的同行档案。', adminHint: '请使用已获授权的管理员账号登录。',
+      identifier: '账号或邮箱', username: '账号', email: '邮箱', password: '密码', confirmPassword: '确认密码', cultureRole: '我的文化身份', guide: '文化向导', partner: '文化伙伴', guideHint: '分享家乡与中国文化', partnerHint: '探索节气与多元文化',
+      passwordHint: '至少12个字符，最多72个UTF-8字节', usernameHint: '3–64位字母、数字或下划线', adult: '我已年满18周岁（未勾选仍可注册；真人结对与私聊将不开放）', agreement: '我已阅读并同意', privacy: '体验说明与隐私说明',
+      noAccount: '还没有账号？', haveAccount: '已有账号？', adminEntry: '管理员入口', portalEntry: '返回用户登录', submit: '保存档案', submitting: '正在处理…', retry: '重新加载',
+      loginError: '登录失败，请检查账号密码或稍后重试', loadError: '暂时无法读取数据，请检查服务后重试', saveError: '保存失败，请稍后重试', saved: '档案已保存', registered: '账号创建成功，请登录',
+      required: '请完整填写所有必填项', passwordMismatch: '两次输入的密码不一致', consentRequired: '请先阅读并同意体验说明',
+      hello: '你好，', helloBody: '每一段文化交流，都从好好认识彼此开始。', accountReady: '账号已就绪', profileTitle: '让伙伴认识你', profileBody: '用语言、兴趣与生活节奏，描绘独一无二的你。', editProfile: '完善文化档案', identity: '文化身份', timezone: '所在时区', interests: '兴趣标签', notSet: '尚未设置', profileProgress: '档案准备度',
+      preparingTitle: '故事，正在四季里酝酿', preparingBody: '二十四节气与双视角故事尚未开放。先完善档案，准备迎接下一次相遇。',
+      displayName: '显示名称', country: '国家或地区（选填）', nativeLang: '母语', learnLang: '正在学习', languageLevels: '语言水平（0为未学习，5为熟练）', chinese: '中文', english: '英语', slots: '每周可协作时段', addSlot: '添加时段', remove: '移除', day: '星期', start: '开始时间', end: '结束时间',
+      privacyTitle: '隐私偏好', showCountry: '向伙伴展示国家或地区', showAvatar: '允许展示头像（头像上传尚未开放）', notifications: '提醒偏好（提醒服务尚未开放）', termReminders: '节气提醒', partnerReminders: '伙伴提醒', versionNote: '档案按版本保存，跨设备修改会提示刷新。',
+      adminIntro: '让每一次文化相遇，有真实而可靠的起点。', realUsers: '已注册账号', actualData: '来自当前数据库，包含开发演示与测试账号', userList: '账号与权限', status: '状态', active: '可用', disabled: '已停用', roles: '角色', actions: '操作', disable: '停用', enable: '启用', confirmDisable: '确认停用此用户？已有登录将立即失效。', updated: '用户状态已更新', adminError: '操作失败，请刷新后重试', created: '注册时间',
+      privacyBody: '当前为开发体验版本。注册会保存账号、加密邮箱和密码哈希；邮箱验证邮件尚未接入。语言、兴趣和时区用于后续文化结对；国家或地区可选，默认不公开。立春故事会保存选择、进度、协作答案与完成奖励；接受邀请后双方可查看各自线索及统一判定。文字回礼和打卡仅自己可见，不自动公开或发送。小满对话会保存脱敏消息与回复；配置模型后会向该服务发送获准线索及审校知识，未配置时本地脚本回应。通用结对与上传尚未开放。本机演示数据不代表真实用户规模。请勿提交敏感个人信息。正式上线前将另行提供完整政策及数据导出、注销入口。', back: '返回登录', notFound: '这一页暂未抵达', notFoundBody: '地址可能已变更，回到同行的起点吧。', backHome: '返回首页',
+    },
+    en: {
+      brand: 'Suishi', subtitle: 'WALKING THROUGH THE SEASONS', locale: '中文', home: 'My journey', profile: 'Cultural profile', admin: 'Workspace', users: 'Users', logout: 'Sign out',
+      login: 'Sign in', register: 'Create account', welcome: 'Four seasons. Shared stories.', welcomeBody: 'Begin with a season and a story. Discover another culture, and see your own everyday life anew.',
+      spring: 'Spring', summer: 'Summer', autumn: 'Autumn', winter: 'Winter', tagline: 'SEASONS TO SHARE · SOMEONE TO WALK WITH',
+      loginTitle: 'Welcome back', registerTitle: 'A new connection starts here', adminTitle: 'Behind every cultural story', loginHint: 'Sign in to continue your cultural journey.', registerHint: 'Choose a cultural identity and create your own profile.', adminHint: 'Sign in with an authorized administrator account.',
+      identifier: 'Username or email', username: 'Username', email: 'Email', password: 'Password', confirmPassword: 'Confirm password', cultureRole: 'My cultural identity', guide: 'Cultural guide', partner: 'Cultural partner', guideHint: 'Share local and Chinese culture', partnerHint: 'Explore seasonal traditions',
+      passwordHint: 'At least 12 characters, at most 72 UTF-8 bytes', usernameHint: '3–64 letters, numbers or underscores', adult: 'I am 18 or older. You can register without this; human pairing and private chat will remain unavailable.', agreement: 'I have read and agree to the', privacy: 'Preview and privacy notice',
+      noAccount: 'New here?', haveAccount: 'Already have an account?', adminEntry: 'Administrator sign in', portalEntry: 'Back to member sign in', submit: 'Save profile', submitting: 'Working…', retry: 'Try again',
+      loginError: 'Unable to sign in. Check your credentials or try again later.', loadError: 'Unable to load data. Check the service and try again.', saveError: 'Unable to save. Please try again.', saved: 'Profile saved', registered: 'Account created. Please sign in.',
+      required: 'Please complete all required fields', passwordMismatch: 'Passwords do not match', consentRequired: 'Please read and accept the preview notice',
+      hello: 'Hello, ', helloBody: 'Every cultural connection begins with getting to know each other.', accountReady: 'Your account is ready', profileTitle: 'Let your partner get to know you', profileBody: 'Share your languages, interests and daily rhythm.', editProfile: 'Edit cultural profile', identity: 'Cultural identity', timezone: 'Time zone', interests: 'Interests', notSet: 'Not set yet', profileProgress: 'Profile readiness',
+      preparingTitle: 'Stories are growing with the seasons', preparingBody: 'The solar-term calendar and collaborative stories are not open yet. Prepare your profile for a future connection.',
+      displayName: 'Display name', country: 'Country or region (optional)', nativeLang: 'Native language', learnLang: 'Learning', languageLevels: 'Language level (0: new, 5: fluent)', chinese: 'Chinese', english: 'English', slots: 'Weekly availability', addSlot: 'Add time slot', remove: 'Remove', day: 'Weekday', start: 'Start time', end: 'End time',
+      privacyTitle: 'Privacy preferences', showCountry: 'Show country or region to partners', showAvatar: 'Allow avatar display (uploads are not open yet)', notifications: 'Notification preferences (delivery is not open yet)', termReminders: 'Seasonal reminders', partnerReminders: 'Partner reminders', versionNote: 'Profile changes are versioned. Updates on another device may require a refresh.',
+      adminIntro: 'A trustworthy beginning for every cultural connection.', realUsers: 'Registered accounts', actualData: 'From the current database, including development demo and test accounts', userList: 'Accounts and permissions', status: 'Status', active: 'Active', disabled: 'Disabled', roles: 'Roles', actions: 'Actions', disable: 'Disable', enable: 'Enable', confirmDisable: 'Disable this user? Existing sessions will stop working immediately.', updated: 'User status updated', adminError: 'Unable to update. Refresh and try again.', created: 'Created',
+      privacyBody: 'This is a development preview. Registration stores your username, encrypted email and password hash. Email verification is not connected yet. Languages, interests and time zone prepare for future pairing; country is optional and private by default. The Lichun story stores choices, progress, collaboration answers and completion rewards. After accepting an invitation, each person sees their own clues and the shared judgment. Text gifts and check-ins are private and are not automatically sent or published. Xiaoman chat stores redacted messages and replies. When a model is configured, permitted clues and reviewed knowledge are sent to that service; otherwise a local script replies. General pairing and uploads are not open yet. Demo data does not represent a real user population. Do not submit sensitive personal information. A full policy, data export and account deletion will be provided before public launch.', back: 'Back to sign in', notFound: 'This page has not arrived yet', notFoundBody: 'The address may have changed. Return to the start of your journey.', backHome: 'Back to home',
+    },
+  },
+})

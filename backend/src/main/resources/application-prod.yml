@@ -1,0 +1,10 @@
+app:
+  security:
+    cookie-secure: true
+  bootstrap:
+    demo-enabled: false
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    enabled: false

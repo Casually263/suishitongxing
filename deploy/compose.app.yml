@@ -1,0 +1,33 @@
+# Development application overlay. Production HTTPS/backup hardening is stage9.
+services:
+  backend:
+    build: ../backend
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      DB_URL: jdbc:mysql://mysql:3306/suishi_dev?connectionTimeZone=UTC
+      DB_USERNAME: suishi
+      DB_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD}
+      REDIS_HOST: redis
+      REDIS_PASSWORD: ${REDIS_PASSWORD:?Set REDIS_PASSWORD}
+      JWT_SECRET_BASE64: ${JWT_SECRET_BASE64:?Set JWT_SECRET_BASE64}
+      EMAIL_ENCRYPTION_KEY_BASE64: ${EMAIL_ENCRYPTION_KEY_BASE64:?Set EMAIL_ENCRYPTION_KEY_BASE64}
+      EMAIL_HMAC_KEY_BASE64: ${EMAIL_HMAC_KEY_BASE64:?Set EMAIL_HMAC_KEY_BASE64}
+      APP_ALLOWED_ORIGINS: http://localhost:8088,http://127.0.0.1:8088
+      APP_BOOTSTRAP_ENABLED: ${APP_BOOTSTRAP_ENABLED:-false}
+      ADMIN_USERNAME: ${ADMIN_USERNAME:-demo_admin}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+      APP_DEMO_ENABLED: ${APP_DEMO_ENABLED:-false}
+      DEMO_PASSWORD: ${DEMO_PASSWORD:-}
+      AI_API_KEY: ${AI_API_KEY:-}
+      AI_BASE_URL: ${AI_BASE_URL:-}
+      AI_MODEL: ${AI_MODEL:-}
+      AI_ALLOWED_ORIGINS: ${AI_ALLOWED_ORIGINS:-https://api.openai.com}
+      AI_ALLOW_LOCAL_ENDPOINTS: "false"
+    depends_on:
+      mysql: { condition: service_healthy }
+      redis: { condition: service_healthy }
+  nginx:
+    build: ../web
+    ports: ["127.0.0.1:8088:80"]
+    volumes: ["./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro"]
+    depends_on: [backend]

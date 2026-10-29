@@ -1,0 +1,109 @@
+{
+  "generatedAt": "2026-10-28T13:35:14.487Z",
+  "sourceHash": "3580f826ccf23faca191eb3a6ec1cf7457e1ca231fc859ad6c5ae3ea1e0dbd07",
+  "originalDocumentSha256": "5e2d775e58b58d9f7f1a1c799b79daaf2ad3cf4681b1e939feb9c82d8fde3aa6",
+  "backend": {
+    "passed": 53,
+    "unit": [
+      {
+        "path": "backend/target/surefire-reports/TEST-com.suishi.ai.AiSafetyTest.xml",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "path": "backend/target/surefire-reports/TEST-com.suishi.ai.OpenAiCompatibleProviderTest.xml",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "path": "backend/target/surefire-reports/TEST-com.suishi.security.CryptoSecurityTest.xml",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "path": "backend/target/surefire-reports/TEST-com.suishi.story.StoryGraphTest.xml",
+        "tests": 12,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "integration": [
+      {
+        "path": "backend/target/failsafe-reports/TEST-com.suishi.ai.AiIT.xml",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "path": "backend/target/failsafe-reports/TEST-com.suishi.story.StoryIT.xml",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "path": "backend/target/failsafe-reports/TEST-com.suishi.system.IdentityIT.xml",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "database": "MySQL 8.0.43 / isolated suishi_it",
+    "redis": "Memurai Redis-compatible 8.2; not Redis7 certification"
+  },
+  "frontend": {
+    "unitPassed": 14,
+    "build": "passed",
+    "browser": {
+      "startTime": "2026-10-28T13:33:01.334Z",
+      "duration": 23092.734,
+      "expected": 7,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "security": {
+    "localCredentialLeakFound": false,
+    "sourceProjectionChecked": true,
+    "protectedPayloadsTested": true,
+    "redirectsTested": true,
+    "reviewedKnowledgeHashTested": true,
+    "immutableStoryStateTested": true,
+    "markdownLinksChecked": 71
+  },
+  "runtime": {
+    "health": "UP",
+    "aiEnabled": true,
+    "openapiPaths": [
+      "/api/admin/ai/knowledge/{id}/review",
+      "/api/admin/ai/config",
+      "/api/app/stories/{chapterId}/ai/chat",
+      "/api/portal/stories/{chapterId}/ai/chat",
+      "/api/app/stories/{chapterId}/ai/history",
+      "/api/portal/stories/{chapterId}/ai/history",
+      "/api/admin/ai/usage",
+      "/api/admin/ai/knowledge"
+    ]
+  },
+  "modelVerification": "Local real HTTP/SSE compatible fixtures and no-key browser demo only; no paid or third-party live model called",
+  "screenshots": [
+    "ai-no-key-desktop.png",
+    "ai-no-key-mobile.png",
+    "ai-admin.png"
+  ],
+  "limitations": [
+    "Semantic fact validation still needs human review/evaluation",
+    "No production Docker/Redis7 verification",
+    "General partner switching and mini-program AI transport remain pending"
+  ]
+}

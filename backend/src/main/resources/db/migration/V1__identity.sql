@@ -1,0 +1,48 @@
+CREATE TABLE sys_user (
+  id BIGINT PRIMARY KEY,
+  username VARCHAR(64) NOT NULL,
+  username_normalized VARCHAR(64) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  email_enc VARCHAR(768) NOT NULL,
+  email_lookup CHAR(64) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  password_hash VARCHAR(100) NOT NULL,
+  role_type VARCHAR(16) NOT NULL,
+  status VARCHAR(16) NOT NULL DEFAULT 'ACTIVE',
+  auth_version INT NOT NULL DEFAULT 0,
+  adult_status BOOLEAN NOT NULL DEFAULT FALSE,
+  email_verified BOOLEAN NOT NULL DEFAULT FALSE,
+  terms_version VARCHAR(32) NOT NULL,
+  created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  updated_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
+  UNIQUE KEY uk_user_username (username_normalized),
+  UNIQUE KEY uk_user_email (email_lookup),
+  CONSTRAINT ck_user_role CHECK (role_type IN ('GUIDE','PARTNER')),
+  CONSTRAINT ck_user_status CHECK (status IN ('ACTIVE','DISABLED'))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE user_profile (
+  id BIGINT PRIMARY KEY,
+  user_id BIGINT NOT NULL,
+  display_name VARCHAR(64) NOT NULL,
+  country VARCHAR(50) NULL,
+  native_lang VARCHAR(20) NOT NULL DEFAULT 'zh',
+  learn_lang VARCHAR(20) NOT NULL DEFAULT 'en',
+  lang_level JSON NOT NULL,
+  timezone VARCHAR(64) NOT NULL DEFAULT 'Asia/Shanghai',
+  avail_slots JSON NOT NULL,
+  privacy JSON NOT NULL,
+  notification_preferences JSON NOT NULL,
+  version INT NOT NULL DEFAULT 0,
+  created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  updated_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
+  UNIQUE KEY uk_profile_user (user_id),
+  CONSTRAINT fk_profile_user FOREIGN KEY (user_id) REFERENCES sys_user(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE sys_role (id BIGINT PRIMARY KEY, code VARCHAR(32) NOT NULL UNIQUE, name VARCHAR(64) NOT NULL, enabled BOOLEAN NOT NULL DEFAULT TRUE) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE sys_menu (id BIGINT PRIMARY KEY, code VARCHAR(64) NOT NULL UNIQUE, permission_code VARCHAR(64) NOT NULL UNIQUE, name VARCHAR(64) NOT NULL, route VARCHAR(100) NULL, enabled BOOLEAN NOT NULL DEFAULT TRUE) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE sys_user_role (user_id BIGINT NOT NULL, role_id BIGINT NOT NULL, PRIMARY KEY(user_id,role_id), FOREIGN KEY(user_id) REFERENCES sys_user(id), FOREIGN KEY(role_id) REFERENCES sys_role(id)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE sys_role_menu (role_id BIGINT NOT NULL, menu_id BIGINT NOT NULL, PRIMARY KEY(role_id,menu_id), FOREIGN KEY(role_id) REFERENCES sys_role(id), FOREIGN KEY(menu_id) REFERENCES sys_menu(id)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE interest_tag (id BIGINT PRIMARY KEY, code VARCHAR(64) NOT NULL UNIQUE, name_i18n JSON NOT NULL, enabled BOOLEAN NOT NULL DEFAULT TRUE) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE user_tag (user_id BIGINT NOT NULL, tag_id BIGINT NOT NULL, PRIMARY KEY(user_id,tag_id), FOREIGN KEY(user_id) REFERENCES sys_user(id), FOREIGN KEY(tag_id) REFERENCES interest_tag(id)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE sys_login_log (id BIGINT PRIMARY KEY, user_id BIGINT NULL, channel VARCHAR(16) NOT NULL, success BOOLEAN NOT NULL, reason_code VARCHAR(64) NOT NULL, created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3), KEY idx_login_user(user_id,created_at)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE sys_oper_log (id BIGINT PRIMARY KEY, actor_id BIGINT NOT NULL, action VARCHAR(64) NOT NULL, resource_id BIGINT NULL, created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3), KEY idx_oper_actor(actor_id,created_at)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

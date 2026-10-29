@@ -1,0 +1,163 @@
+{
+  "CheckedAtClientTime": "2026-10-28T16:49:38.3549473+08:00",
+  "ClientTimezone": "Asia/Shanghai",
+  "Workspace": "E:\\suishitongxing_project",
+  "InspectionOnly": true,
+  "Tools": [
+    {
+      "Name": "java.exe",
+      "Path": "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.exe",
+      "Status": "AVAILABLE",
+      "ExitCode": 0,
+      "Output": "java version \"25.0.2\" 2026-01-20 LTS\r\nJava(TM) SE Runtime Environment (build 25.0.2+10-LTS-69)\r\nJava HotSpot(TM) 64-Bit Server VM (build 25.0.2+10-LTS-69, mixed mode, sharing)"
+    },
+    {
+      "Name": "javac.exe",
+      "Path": "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\javac.exe",
+      "Status": "AVAILABLE",
+      "ExitCode": 0,
+      "Output": "javac 25.0.2"
+    },
+    {
+      "Name": "mvn.cmd",
+      "Path": "E:\\maven\\apache-maven-3.9.12-bin\\apache-maven-3.9.12\\bin\\mvn.cmd",
+      "Status": "AVAILABLE",
+      "ExitCode": 0,
+      "Output": "Apache Maven 3.9.12 (848fbb4bf2d427b72bdb2471c22fced7ebd9a7a1)\r\nMaven home: E:\\maven\\apache-maven-3.9.12-bin\\apache-maven-3.9.12\r\nJava version: 25.0.2, vendor: Oracle Corporation, runtime: C:\\Program Files\\Java\\jdk-25.0.2\r\nDefault locale: zh_CN, platform encoding: UTF-8\r\nOS name: \"windows 11\", version: \"10.0\", arch: \"amd64\", family: \"windows\""
+    },
+    {
+      "Name": "node.exe",
+      "Path": "C:\\Program Files\\nodejs\\node.exe",
+      "Status": "AVAILABLE",
+      "ExitCode": 0,
+      "Output": "v24.14.0"
+    },
+    {
+      "Name": "npm.cmd",
+      "Path": "C:\\Program Files\\nodejs\\npm.cmd",
+      "Status": "AVAILABLE",
+      "ExitCode": 0,
+      "Output": "11.11.0"
+    },
+    {
+      "Name": "git.exe",
+      "Path": "C:\\Program Files\\Git\\cmd\\git.exe",
+      "Status": "AVAILABLE",
+      "ExitCode": 0,
+      "Output": "git version 2.47.0.windows.2"
+    },
+    {
+      "Name": "mysql.exe",
+      "Path": "D:\\mysql-8.0.43-winx64\\bin\\mysql.exe",
+      "Status": "AVAILABLE",
+      "ExitCode": 0,
+      "Output": "D:\\mysql-8.0.43-winx64\\bin\\mysql.exe  Ver 8.0.43 for Win64 on x86_64 (MySQL Community Server - GPL)"
+    },
+    {
+      "Name": "mysqld.exe",
+      "Path": "D:\\mysql-8.0.43-winx64\\bin\\mysqld.exe",
+      "Status": "AVAILABLE",
+      "ExitCode": 0,
+      "Output": "D:\\mysql-8.0.43-winx64\\bin\\mysqld.exe  Ver 8.0.43 for Win64 on x86_64 (MySQL Community Server - GPL)"
+    },
+    {
+      "Name": "redis-server.exe",
+      "Path": null,
+      "Status": "NOT_DETECTED",
+      "ExitCode": null,
+      "Output": ""
+    },
+    {
+      "Name": "redis-cli.exe",
+      "Path": null,
+      "Status": "NOT_DETECTED",
+      "ExitCode": null,
+      "Output": ""
+    },
+    {
+      "Name": "docker.exe",
+      "Path": null,
+      "Status": "NOT_DETECTED",
+      "ExitCode": null,
+      "Output": ""
+    },
+    {
+      "Name": "wsl.exe",
+      "Path": "C:\\WINDOWS\\system32\\wsl.exe",
+      "Status": "FAILED",
+      "ExitCode": 50,
+      "Output": "未安装适用于 Linux 的 Windows 子系统。可通过运行 “wsl.exe --install” 进行安装。\r\r\n有关详细信息，请访问 https://aka.ms/wslinstall"
+    },
+    {
+      "Name": "winget.exe",
+      "Path": null,
+      "Status": "NOT_DETECTED",
+      "ExitCode": null,
+      "Output": ""
+    }
+  ],
+  "MySqlService": "Stopped",
+  "DockerEngine": {
+    "Status": "NOT_CHECKED",
+    "ExitCode": null,
+    "Output": "Docker CLI not available"
+  },
+  "DockerCompose": {
+    "Status": "NOT_CHECKED",
+    "ExitCode": null,
+    "Output": "Docker CLI not available"
+  },
+  "ContainerRedisVersion": {
+    "Status": "NOT_CHECKED",
+    "ExitCode": null,
+    "Output": "Docker CLI not available"
+  },
+  "Ports": [
+    {
+      "Host": "127.0.0.1",
+      "Port": 3306,
+      "State": "CLOSED_OR_UNREACHABLE"
+    },
+    {
+      "Host": "127.0.0.1",
+      "Port": 6379,
+      "State": "CLOSED_OR_UNREACHABLE"
+    },
+    {
+      "Host": "127.0.0.1",
+      "Port": 8080,
+      "State": "CLOSED_OR_UNREACHABLE"
+    },
+    {
+      "Host": "127.0.0.1",
+      "Port": 5173,
+      "State": "CLOSED_OR_UNREACHABLE"
+    },
+    {
+      "Host": "127.0.0.1",
+      "Port": 9000,
+      "State": "CLOSED_OR_UNREACHABLE"
+    },
+    {
+      "Host": "127.0.0.1",
+      "Port": 9001,
+      "State": "CLOSED_OR_UNREACHABLE"
+    }
+  ],
+  "Stage1PrecheckReady": false,
+  "GateIssues": [
+    "JDK_17_NOT_ACTIVE",
+    "MAVEN_NOT_USING_JAVA_17",
+    "MYSQL_TCP_NOT_AVAILABLE",
+    "REDIS_TCP_NOT_AVAILABLE",
+    "DOCKER_ENGINE_NOT_AVAILABLE",
+    "DOCKER_COMPOSE_NOT_AVAILABLE"
+  ],
+  "StillRequires": [
+    "MySQL authenticated query and clean migration",
+    "Redis 7 authenticated PING/version",
+    "Dependency resolution and actual builds",
+    "MinIO verified source/image and connectivity"
+  ],
+  "ScopeLimit": "Not detected means absent from PATH and known locations, not proof of absence on all disks. No credentials or machine secrets were read."
+}

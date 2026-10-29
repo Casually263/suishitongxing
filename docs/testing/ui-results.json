@@ -1,0 +1,58 @@
+{
+  "recordedAt": "2026-10-28T14:10:39.380Z",
+  "workspace": "E:\\suishitongxing_project",
+  "frontend": {
+    "productionBuildAt": "2026-10-28T14:05:11.107Z",
+    "unitPassed": 14,
+    "browserPassed": 10,
+    "skipped": 0,
+    "failed": 0,
+    "browserDurationMs": 30148.453
+  },
+  "runtime": {
+    "backendHealth": "UP",
+    "websiteHttpStatus": 200
+  },
+  "review": {
+    "localDocumentationLinksChecked": 50,
+    "clientCredentialPatternScan": "passed (limited pattern scan, not a full security audit)",
+    "backendTestsRerun": false,
+    "npmDependenciesAdded": false,
+    "realMobileDeviceTested": false
+  },
+  "sourceSha256": {
+    "web/src/App.vue": "b0b9bdfcc159931f87040d9237271b651ded5266380ed509fea280b260044eb1",
+    "web/src/api/ai.ts": "a98bd0f3cf9d7bfc30cb6571f6caf672cca4747b9740707483f52bee5f49df0a",
+    "web/src/api/client.ts": "6faca4c75cda050ce3fef78ad8a5688275a52bd3fc854792bc2725dd228c1fe0",
+    "web/src/api/sse.ts": "bc64c687e55f5ed03c21d4816d699bb6ab060720c025764734919f77aeecea3d",
+    "web/src/api/story.ts": "3f0fd8446171566da029aed04993fe1f5ff26d51f97fea018b6bf78cc2cb38f6",
+    "web/src/api/types.ts": "b66f4f9a09e1e1b45d32fd0142dd987189dd90a4bf30b2466ef3697414b87c81",
+    "web/src/app/navigation.ts": "c1e49835521549889d4d6648e5425d3d59bea34201f13b97b977594d34c5d43d",
+    "web/src/app/router.ts": "f909559532212bf1c0cd5ca370b3ced0de92376bf9bbf0394175f490e6af0f19",
+    "web/src/components/AiCompanion.vue": "cd9ab867de812428806fa0088c7092a93d4e4e2ae623b6e1ee6ae6726eedd2fb",
+    "web/src/components/DualInteraction.vue": "3b4bbe267f4c14ffc5fa7bf21622f3d100561b40962aecb2285b15302371fddc",
+    "web/src/components/ExperienceState.vue": "77f61383e34b306181ed840a88dec934a0022c011ac829a42360e36f90dae6cd",
+    "web/src/components/SeasonArtwork.vue": "65b21c08ce573b012f715e3edd7df6bf87b84da082d5eacec1091a427b458231",
+    "web/src/components/SolarWheel.vue": "b984df8f5b631edd5e3a49c05c4057fec2632b5429ca21e1747517a6fc29afc4",
+    "web/src/experience/seasons.ts": "ef7a6b4a98d5ea223dbbe553c3daeb4ac4b72b1fc66fc4223146602ed8f44abe",
+    "web/src/experience/useJourney.ts": "92e9e5e79e95e6fcbcd2eadb864e700655edaabc4540abf41b663c000578c248",
+    "web/src/locales/index.ts": "dfdca9edf30bd046026f7a960a38d9f95e7270cab78bcab6c7403e1daca739dd",
+    "web/src/main.ts": "c9139f03bfeb8e44fdb9013f5ef37ce39e8f6c6e0376196965097598104dcb77",
+    "web/src/pages/AdminPage.vue": "e1c17d984afc95e518c7b5a8fb63930f88f06b4f38f309abc458385143085c4e",
+    "web/src/pages/AiAdminPage.vue": "4236d3d93495763f17642d0f31403955251c123807792d25d7dc8fc2b27899ae",
+    "web/src/pages/AuthPage.vue": "f2d0eabc98b833ff0c71961bb48f6ea0cad89e8e86ec08b9b749c93bcafa1631",
+    "web/src/pages/CollaborationPage.vue": "a192ef33556347745007243c3c2579e20797285d2e33e7c6094b553daca9bcec",
+    "web/src/pages/GiftsPage.vue": "3f042f82716ff529d972b76395887920ffbc008212a1cc79bd87ca77a97fedb9",
+    "web/src/pages/HomePage.vue": "ad1f68af334ce3ddb31104cf8f6c86677319cd2ffef889e2dd2c7cc0113801d7",
+    "web/src/pages/NotFoundPage.vue": "a850062d5e1b0a34d5f2d1d95a7d97e8c27c297c3e9b9ce8191a245485af3dd3",
+    "web/src/pages/PassportPage.vue": "925a588246809508d4aafd4cb10af4a88f997de494e3222d6c2179f058961918",
+    "web/src/pages/PrivacyPage.vue": "55ff090a7f6a36c5971a65bc1589c6ee22798283b0dd7e020a0e9d29f88ab0c8",
+    "web/src/pages/ProfilePage.vue": "a399771283cb6c302e22fc564915a95e098fc657d604ad24c08556235109751d",
+    "web/src/pages/StoryPage.vue": "69f054fd1e03791ffba749eafd72b1ecf10109563b6fc1329dd17b412e3e0162",
+    "web/src/stores/auth.ts": "d2a73ca36938758acfc50f976dfd0d47efbb10438c764e8334b1570343bbca7d",
+    "web/src/styles/ai.css": "ad82287fd1c056385ba8ac06b9173b00fab2a299bad94b1ce0499a54239e0171",
+    "web/src/styles/experience.css": "ca580b7d5af4f70f47ca69ee1a41ffd218b2dc5d882fc524bba6e59d53b6a04d",
+    "web/src/styles/main.css": "ab503be97c77a77b585b1d5e99e46d9f867cad2e22d1721266127c329426aff2",
+    "web/src/styles/story.css": "942daf80350163601de97cfc1d32595cd83d9f0b2ae02defe13a57d853faca91"
+  }
+}
