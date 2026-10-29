@@ -1,10 +1,10 @@
 # 岁时同行
 
-代码仓库：[Casually263/suishitongxing](https://github.com/Casually263/suishitongxing)，私有仓库，当前仅所有者访问；团队成员需单独邀请。
+代码仓库：[Casually263/suishitongxing](https://github.com/Casually263/suishitongxing)，公开仓库，任何人均可查看和下载代码；团队成员直接向本仓库推送修改仍需协作者权限。
 
 日常打开项目请看[本机运行指南](docs/run-guide.md)：两个终端启动、访问地址、演示账号、关闭步骤及常见问题。
 
-团队协作请看[私有仓库与团队开发指南](docs/team-collaboration.md)：克隆、独立环境配置、分支提交与密钥排除规则。
+团队协作请看[共享仓库与团队开发指南](docs/team-collaboration.md)：克隆、独立环境配置、分支提交与密钥排除规则。
 
 基于二十四节气与双视角互动叙事的中外文化交流平台。当前已落地**阶段1基础工程、立春剧情引擎、小满AI伙伴及Vue Flow剧情编辑器**：真实账号、JWT/Redis会话、个人档案、管理权限、数据库剧情图、双人异步解谜与持久化结局奖励。小满支持可配置OpenAI兼容对话、SSE和无密钥脚本降级。年度节气日期、通用结对、上传和小程序仍待开发；Redis7及Docker目标环境尚未完成运行验收。
 

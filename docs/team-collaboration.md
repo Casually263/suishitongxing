@@ -1,10 +1,12 @@
-# 团队协作与私有仓库
+# 团队协作与代码共享
 
-项目以私有仓库共享。当前不邀请协作者；后续由仓库所有者按 GitHub 用户名逐一邀请，伙伴接受邀请后才能访问。团队开发通常授予写入权限，无需授予管理员权限。不要将仓库可见性改为公开。
+项目按所有者确认于 2026-10-29 改为公开仓库：[Casually263/suishitongxing](https://github.com/Casually263/suishitongxing)。可以直接把链接发给队友，任何人都能查看和下载代码。
+
+公开可读不等于可直接修改本仓库。当前没有邀请协作者；后续由所有者按 GitHub 用户名逐一邀请，伙伴接受邀请后才能直接推送自己的分支。团队开发通常授予写入权限，无需授予管理员权限；未获写权限的开发者也可以通过自己的 Fork 提交 Pull Request。
 
 ## 首次获取项目
 
-获得访问权限后，在 Git Bash、PowerShell 或 IDEA 的 Git 克隆入口使用仓库地址：
+在 Git Bash、PowerShell 或 IDEA 的 Git 克隆入口使用仓库地址，无需先获得邀请：
 
 ```powershell
 git clone https://github.com/Casually263/suishitongxing.git
@@ -28,6 +30,8 @@ npm.cmd --prefix web run dev
 用户端和管理端共用 `web` 工程与后端。Docker 配置已提供，但原开发电脑尚未完成 Docker 运行验收。
 
 ## 日常提交
+
+以下向原仓库推送的流程适用于已经接受写权限邀请的团队成员：
 
 ```powershell
 git pull --ff-only origin main
