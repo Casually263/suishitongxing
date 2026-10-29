@@ -1,5 +1,7 @@
 # 岁时同行
 
+代码仓库：[Casually263/suishitongxing](https://github.com/Casually263/suishitongxing)，私有仓库，当前仅所有者访问；团队成员需单独邀请。
+
 日常打开项目请看[本机运行指南](docs/run-guide.md)：两个终端启动、访问地址、演示账号、关闭步骤及常见问题。
 
 团队协作请看[私有仓库与团队开发指南](docs/team-collaboration.md)：克隆、独立环境配置、分支提交与密钥排除规则。

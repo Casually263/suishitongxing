@@ -173,6 +173,8 @@ AI本轮说明见[AI伙伴](docs/ai-companion.md)及[验证报告](docs/testing/
 - [x] 初始化本地 Git 仓库，主分支 main
 - [x] 排除本机环境文件、数据库数据、依赖、构建产物与私钥
 - [x] 添加提交前分享检查脚本与团队协作指南
-- [ ] 完成 GitHub 官方登录授权并确认 Casually263 身份
-- [ ] 创建 Casually263/suishitongxing 私有仓库并推送、核对远程提交
-- [ ] 后续按所有者提供的 GitHub 用户名邀请伙伴（当前明确不邀请）
+- [x] 完成 GitHub 官方登录授权并确认 Casually263 身份
+- [x] 创建 Casually263/suishitongxing 私有仓库并推送、核对远程提交
+- [x] 核验当前无其他协作者、无待接受邀请；遵照要求暂不邀请伙伴
+
+后续如需团队访问，由所有者提供 GitHub 用户名后再逐一邀请。仓库不包含本机密码、数据库数据或安装好的依赖，团队需自行初始化环境。见[团队协作指南](docs/team-collaboration.md)。
